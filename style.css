@@ -212,7 +212,13 @@ article p{
 
 }
 
-section.products::after{
+.curve{
+    width:100%;
+    position: relative;
+    bottom: 10px;
+}
+
+/* section.products::after{
     background-image: url(./SVG/Artboard\ 4.svg);  
     content:'';
     position:absolute;
@@ -222,7 +228,7 @@ section.products::after{
     min-width:100%;
     margin: 0 auto;
     z-index: -1;
-}
+} */
 
 
 
