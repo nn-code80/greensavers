@@ -1,0 +1,1036 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+
+/* Colors */
+
+--GrayishBlack: #262326;
+--gray: #4C4646;
+--pastelblue: #5690AA;  
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* 
+fonts
+font-family: "Dosis", sans-serif; - Titles
+ font-family: "Poppins", sans-serif; -
+*/
+html {
+    scroll-behavior: smooth;
+  }
+
+body{
+    color: var(--gray);
+}
+
+h1, h2{
+    font-family: "Dosis", sans-serif;
+
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 95%;
+    margin:2rem auto;
+    position: relative;
+}
+
+.hamburger{
+    position: absolute;
+    right: 25px;
+    opacity: 0;
+    transition: all 0.35s ease;
+}
+
+.hamburger .line{
+    height: 3px;
+    width: 27px;
+    background-color: black;
+    margin-bottom: 4px;
+    border-radius: 20px;
+    transition: transform 0.5s ease, opacity .2s ease;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+    color: black;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown{
+    width: 100%;
+    /* height:500px; */
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    height:0;
+    transition: all 0.5s ease-out;
+
+   
+   
+}
+
+.dropdown ul{
+    text-align: center;
+    
+}
+
+.dropdown ul li a{
+   text-decoration: none;
+   color: black;
+   opacity:0;
+   
+}
+
+main{
+    margin-top: 2rem;
+    position: relative;
+  
+}
+
+/* this is the Hero section */
+
+.hero{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   max-width: 1200px;
+   width: 95%;
+   margin: 0 auto;
+}
+
+.herotext{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+}
+
+.herotext h1{
+    font-size: 4rem;
+}
+.herotext h2{
+    font-size: 2.5rem;
+    max-width: 800px;
+}
+
+.herotext p{
+    max-width: 570px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.hero figure{
+
+    z-index: 0;
+}
+
+.hero figure img{
+    max-width: 600px;
+    width: 100%;
+}
+
+button.buttontop{
+    align-self: center;
+    border: none;
+    background-color: var(--gray);
+    color: white;
+    padding: .7rem 2rem;
+    border-radius: 5px;
+    margin-top: 5rem;
+}
+
+/* Our products */
+
+section.products{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--GrayishBlack);  
+    color: white;
+    padding: 3rem 0;
+    position: relative;
+}
+
+
+
+.products h1{
+ text-align: center;
+    margin: 3rem 0;
+    font-size: 4rem;
+}
+
+.products .items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width:95%;
+    margin: 0 auto;
+    
+}
+
+article.oasis img{
+    max-width: 300px;
+    width:100%;
+}
+
+article img{
+    max-width: 250px;
+    width: 100%;;
+}
+
+
+article p{
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    margin: 1rem 0;
+
+}
+
+section.products::after{
+    background-image: url(./SVG/Artboard\ 4.svg);  
+    content:'';
+    position:absolute;
+    background-repeat: no-repeat;
+    height:700px;
+    top: 775px;
+    width:100%;
+    z-index: -1;
+}
+
+
+
+
+
+/* FAQ section */
+
+.faq{
+    margin: 14rem 0 10rem;
+}
+
+.accordion{
+    display: flex;
+    flex-direction: column;
+
+    max-width: 600px;
+    width:95%;
+    margin: 0 auto;
+}
+
+.accordion h1{
+
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+  
+}
+
+.accordion-item {
+    max-width: 600px;
+
+    margin: 0 auto;
+    border: 1px solid var(--gray);
+    padding: 0.8rem 1.5rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+}
+
+
+
+.accordion-item p{
+    margin-top: 0.5rem;
+    line-height: 1.6;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease, opacity 0.4s ease;
+ 
+}
+
+.accordion-item p.active{
+    transition:  opacity 0.35s ease;
+}
+
+.accordion-item h2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 1.4rem;
+ 
+    
+}
+
+.accordion-title::after{
+content: url(./plus_minus/new.svg);
+
+
+} 
+
+.active-header::after{
+    content: url(./plus_minus/MinusNew.svg);
+    position: relative;
+    bottom: 7px;
+}
+
+/* lower NAv */
+
+section.lowerinfo{
+    background-color: var(--GrayishBlack);
+    padding: 5rem;
+    color: white;
+}
+
+.lowerwrapper{
+display: flex;
+align-items: center;
+justify-content: space-around;
+max-width:1200px;
+margin:0 auto;
+}
+
+
+
+.lowerwrapper ul{
+    list-style: none;
+}
+
+.lowerwrapper h1{
+    align-self: flex-start;
+    position: relative;
+    bottom:4px;
+}
+
+.lowerwrapper .socials{
+    align-self: flex-start;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+
+}
+
+.lowerwrapper .info1 ul li, .lowerwrapper .info2 ul li{
+    margin-bottom: 1rem;
+}
+
+.lowerwrapper .info1 ul li a, .lowerwrapper .info2 ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+/* ABOUT US */
+
+
+
+
+/* Our Mission and Who we are */
+
+
+
+.introabout{
+   max-width: 1200px;
+   margin: 0 auto;
+   width:95%;
+  
+
+}
+
+article.mission{
+    margin:5rem 0 3rem 0;
+}
+
+.introabout h1{
+    font-size:2.5rem ;
+
+    
+}
+
+.introabout p{
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+    font-weight: 400;
+    margin: 1.2rem auto;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+
+
+.title{
+    background-color: var(--GrayishBlack);
+    color: white;
+    margin:3rem 0;
+    padding: 0.5rem 0;
+}
+
+/* Additonal infortmation */
+
+
+.title2{
+    background-color: var(--GrayishBlack);
+    color: white;
+    margin:3rem 0;
+    padding: 1.5rem 0;
+}
+
+.itemsinfo {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 420px;
+    margin: 0;
+
+}
+.itemsinfo p{
+    margin:1rem 0 1rem 0;
+}
+
+.itemsinfo p a{
+    text-decoration: none;
+    color: white;
+}
+
+.yellow p{
+    color:#fec901 ;
+    font-weight: 600;
+}
+
+/* the causes */
+
+article.thecauses{
+    margin-bottom: 3rem;
+}
+
+span.black{
+color: black;
+font-weight: 600;
+}
+
+article.thecauses ul{
+display: flex;
+flex-direction: column;
+row-gap: .5rem;
+margin-left: 14px;
+}
+
+
+article.thecauses ul li{
+   line-height: 2;
+   font-weight: 400;
+   letter-spacing: 1px;
+}
+
+/* the symtptoms */
+
+article.thesymptoms ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    margin-left: 14px;
+    }
+
+ article.thesymptoms ul li{
+    line-height: 2;
+    font-weight: 400;
+    letter-spacing: 1px;
+ }   
+
+
+article.thesymptoms{
+    margin-bottom: 3rem;
+}
+
+/* tip for greening out */
+
+article.tips ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    margin-left: 14px;
+    }
+
+article.tips ul li{
+    line-height: 2;
+    font-weight: 400;
+    letter-spacing: 1px;
+}    
+
+
+article.tips{
+    margin-bottom: 3rem;
+}
+
+/* Scroll buttton */
+
+#myBtn{
+    display: none;
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    z-index: 99;
+    cursor: pointer;
+    width: 2.7rem;
+}
+
+/* product page */
+
+article.product{
+    margin: 3rem 0;
+}
+
+/* who are we */
+
+/* Citrus */
+
+article.flavours{
+    margin-bottom: 3rem;
+}
+
+.introabout .ourpro{
+    text-align: center;
+}
+
+
+.citrus2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    padding:0 2rem;
+}
+
+.citrus2 img{
+    max-width: 500px;
+
+}
+
+.citruscontent{
+    text-align: center;
+    margin:0;
+
+}
+
+.citruscontent p{
+    max-width: 450px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Sweet oasis */
+
+article.flavouroasis .title2{
+    padding:3.5rem 0;
+
+}
+
+/* contact form */
+
+header.contact{
+    background-color: var(--GrayishBlack);
+}
+
+.gotquestion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    width:95%;
+    margin: 0 auto;
+    column-gap: 7rem;
+    margin-top: 5rem;
+}
+
+.gotquestion p{
+    font-size: 4rem;
+    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+}
+
+img.question{
+    width: 150px
+    
+}
+
+/* section form */
+
+
+.wrapperform{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    display: grid;
+    max-width:650px;
+    width:95%;
+    margin:8rem auto;
+    padding:30px;
+    border: 1px solid;
+    gap: 15px;
+    border-radius: 15px;
+    background-color: var(--GrayishBlack);
+}
+
+.textarea{
+    grid-column: 1 / -1;
+    grid-row: 3 / 5;
+}
+
+button.submit{
+    grid-column: 1 / -1;
+    grid-row: 5 / 6;
+}
+
+.wrapperform input{
+    width: 100%;
+    height: 100%;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    text-indent: 5px;
+}
+
+.bigtext{
+    border: 1px solid;
+    
+}
+
+input::placeholder{
+    position: relative;
+    right:4px;
+}
+
+
+.wrapperform textarea{
+    font-size: 0.8rem;
+    font-weight: 400;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    text-indent: 5px;
+}
+
+.wrapperform textarea::placeholder{
+    position: relative;
+    right: 4px;
+}
+
+button.submit{
+    background-color: var(--pastelblue);
+    border: none;
+    border-radius: 5px;
+    padding: 12px 0;
+    color: white;
+    letter-spacing: 1px;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+
+
+/* Ipad size */
+
+
+@media(max-width:1000px){
+
+    /* home page   */
+
+
+    /* dropdown */
+
+
+    .dropdown.active{
+        height:300px;
+        transition: height 0.5s ease-out;
+        top:-2rem;
+
+      
+    }
+    
+    .dropdown.active ul{
+        text-align: center;
+    } 
+
+    .dropdown.active ul li{
+margin-top: 1rem;
+    }
+    
+    .dropdown.active ul li a{
+       opacity:1;
+       transition: all 0.5s ease-out 0.1s;
+    }
+
+    /* hero */
+.hero{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.hero figure img{
+    margin-top: 3rem;
+    max-width: 550px;
+    position: relative;
+    right:12px;
+    
+}
+
+
+    /* hero text */
+
+
+    .hamburger{
+        opacity:1;
+        transition: all 0.35s ease;
+    }
+
+   
+
+    .hamburger.active .line.two{
+        opacity:0;
+    }
+
+   
+
+     .hamburger.active .line.one{
+        transform: translateY(8px) rotate(45deg);
+     }
+     
+     .hamburger.active .line.three{
+        transform: translateY(-6px) rotate(-45deg);
+     }
+
+
+
+    /* .herotext h1{
+        font-size: 3.5rem;
+    }
+    .herotext h2{
+        font-size: 2.5rem;
+        max-width: 800px;
+    }
+    
+    .herotext p{
+        max-width: 570px;
+        margin: 0 auto;
+        font-size: 1rem;
+        line-height: 2;
+    } */
+
+    button.buttontop{
+        margin-top: 2rem;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    /* our porducts */
+
+    article.oasis{
+        display: none;
+    }
+
+    article.citrus, article.oasis{
+        max-width: 400px;
+    } 
+
+    .products .items{
+        justify-content: space-around;
+    }
+
+    section.products::after{
+    
+        top: 710px;
+     
+    }
+
+
+
+
+    /* products */
+
+article.mission p{
+    text-align: center !important;
+    max-width: 640px;
+    margin-top: 2rem;
+}
+
+article.mission h1{
+    text-align: center !important;
+}
+
+    .citrus2{
+        flex-direction: column;
+    }
+
+    .citrus2 img{
+        position: relative;
+        right:12px;
+    }
+
+    .oasis{
+        order: 1;
+    }
+
+    .oasis2{
+        order:0;
+    }
+
+}
+
+
+@media(max-width: 727px){
+
+    /* contact us */
+
+    .gotquestion{
+        margin-top: 5rem;
+        column-gap: 0rem;
+        justify-content: space-between;
+    }
+    
+    .gotquestion p{
+       
+        font-family: "Dosis", sans-serif;
+        font-weight: 600;
+        font-size: 3.5rem;
+    }
+    
+   
+    
+
+
+
+}
+
+@media(max-width:580px){
+
+
+/* about us */
+
+
+.introabout h1{
+    font-size: 2.4rem;
+}
+
+
+    /* our products */
+    article.citrus{
+        max-width: 200px;
+
+    }
+
+    article.tropical{
+        max-width: 200px;
+    }
+
+
+article.citrus p{
+    font-size: 1.1rem;
+}
+
+article.tropical p{
+    font-size: 1.1rem;
+}
+
+section.products::after{
+    top: 600px;
+ 
+}
+
+/* FAQ height */
+
+
+.faq{
+    margin: 9rem 0 7rem 0;
+}
+
+/* lower nav */
+
+section.lowerinfo{
+    padding: 80px 40px;
+}
+
+.lowerwrapper{
+    flex-direction: column;
+}
+
+.lowerwrapper .info1{
+    align-self: start;
+    margin-top: 1rem;
+}
+
+.lowerwrapper .info2{
+    align-self: start;
+}
+
+.lowerwrapper .socials{
+    align-self: center;
+}
+
+/* contact us */
+
+
+
+
+.gotquestion p{
+   
+    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+    font-size: 2.8rem;
+}
+
+.gotquestion img{
+    max-width: 1200px;
+}
+
+
+.wrapperform{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    padding:40px 20px;
+}
+
+
+.textarea{
+    grid-column: 1 / -1;
+    grid-row: 5 / 7;
+}
+
+button.submit{
+    grid-column: 1 / -1;
+    grid-row: 7 / 8;
+}
+
+input#phone{
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+   
+}
+
+
+input#emails{
+  
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+}
+
+}
+
+/* about us */
+
+
+@media(max-width: 487px){
+    .introabout h1{
+        font-size: 1.9rem;
+    }
+
+
+.herotext h2{
+    font-size: 1.9rem;
+}
+
+
+.accordion-item h2{
+        font-size: 1rem;
+    }
+
+
+article.citrus{
+        max-width: 150px;
+
+    }
+
+    article.tropical{
+        max-width: 150px;
+    }
+
+
+section.products::after{
+    
+    top: 550px;
+ 
+}
+
+
+
+
+.title2{
+    background-color: var(--GrayishBlack);
+    color: white;
+    margin:3rem 0;
+    padding: 1.5rem 0;
+}
+
+.itemsinfo {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 420px;
+    margin: 0;
+
+}
+.itemsinfo p{
+    margin:1rem 0 1rem 0;
+    font-size: 0.85rem;
+}
+
+
+
+
+.gotquestion p{
+   
+    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+    font-size: 2.3rem;
+}
+
+.gotquestion img{
+    max-width: 100px;
+    width:90%;
+}
+
+
+
+
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
