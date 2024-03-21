@@ -61,7 +61,7 @@ header{
     background-color: black;
     margin-bottom: 4px;
     border-radius: 20px;
-    transition: transform 0.5s ease, opacity .2s ease;
+    transition: transform 0.35s ease, opacity .2s ease;
 }
 
 .navbar ul{
@@ -231,9 +231,9 @@ article p{
 
 
 
-
-
 /* FAQ section */
+
+
 
 .faq{
     margin: 14rem 0 10rem;
