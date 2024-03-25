@@ -48,6 +48,10 @@ header{
     position: relative;
 }
 
+header h1{
+    cursor: pointer;
+}
+
 .hamburger{
     position: absolute;
     right: 25px;
@@ -75,7 +79,31 @@ header{
 .navbar ul li a{
     text-decoration: none;
     color: black;
+    position: relative;
 }
+
+
+.navbar ul li a::after{
+    content: '';
+    height:3px;
+    width:0;
+    border-radius: 25px;
+    background-color: #fec901;
+    position: absolute;
+    bottom:-1px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.35s ease;
+}
+
+.navbar ul li a:hover::after{
+  
+    width:100%;
+}
+
+
+
+
 
 .dropdown{
     width: 100%;
@@ -160,6 +188,12 @@ button.buttontop{
     padding: .7rem 2rem;
     border-radius: 5px;
     margin-top: 5rem;
+    cursor: pointer;
+    transition: background-color 0.35s ease;
+}
+
+button.buttontop:hover{
+    background-color: #262326;
 }
 
 /* Our products */
@@ -181,6 +215,11 @@ section.products{
     font-size: 4rem;
 }
 
+
+
+
+
+
 .products .items{
     display: flex;
     justify-content: space-between;
@@ -191,14 +230,23 @@ section.products{
     
 }
 
+article img:hover, article.oasis img:hover{
+    transform: scale(1.05);
+
+}
+
 article.oasis img{
     max-width: 300px;
     width:100%;
+    cursor: pointer;
+    transition: all 0.35s ease;
 }
 
 article img{
     max-width: 250px;
     width: 100%;;
+    cursor: pointer;
+    transition: all 0.35s ease;
 }
 
 
@@ -236,7 +284,7 @@ article p{
 
 
 .faq{
-    margin: 14rem 0 10rem;
+    margin: 7rem 0 12rem;
 }
 
 .accordion{
@@ -871,7 +919,7 @@ section.products::after{
 
 
 .faq{
-    margin: 9rem 0 7rem 0;
+    margin: 6rem 0 7rem 0;
 }
 
 /* lower nav */
@@ -1019,11 +1067,113 @@ section.products::after{
     width:90%;
 }
 
+}
+
+/* galaxy Fold */
+
+@media(max-width:350px){
+
+/* index */
 
 
+/* Hero */
 
+.herotext h1{
+    font-size: 3rem;
+}
 
+.herotext p{
+   margin-top: 1rem;
+}
+
+/* porducts */
+
+article.citrus img, article.tropical img{
+    max-width: 125px;
     
+}
+
+article.tropical p, article.citrus p{
+    font-size: 0.9rem;
+}
+
+/* FAQ */
+
+.accordion-item h2{
+    font-size: 0.9rem;
+}
+
+.accordion-item p{
+    font-size: 0.8rem;
+}
+
+
+
+
+/* About Us */
+
+/* additional information */
+.itemsinfo p{
+
+font-size: .65rem;
+
+}
+
+.introabout h1{
+    font-size: 1.4rem;
+}
+
+/* OUR products */
+
+/* mission */
+
+.mission p{
+    font-size: 0.9rem;
+}
+
+
+/* 3 products */
+
+.citruscontent p{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+
+/* contact us */
+
+/* got a question? */
+
+
+.gotquestion p{
+   
+
+    font-size: 1.7rem;
+}
+
+.gotquestion img{
+    max-width: 70px;
+    width:90%;
+}
+
+/* form */
+
+.wrapperform{
+    padding: 25px 15px;
+}
+
+
+.lowerwrapper h1, .lowerwrapper .info1, .lowerwrapper .info2{
+    align-self: center;
+    text-align: center;
+ 
+}
+
+.lowerwrapper .socials{
+    margin-top: 1rem;
+}
+
 }
 
 
